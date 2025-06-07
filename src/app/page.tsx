@@ -14,20 +14,24 @@ type SectionName = 'hero' | 'features' | 'providers' | 'download' | 'about';
 const ProviderLogos = () => {
   // Use placeholders. Replace these with your actual image paths.
   const providerImages = [
-    'https://placehold.co/200x80/1e293b/ffffff?text=OpenAI',
-    'https://placehold.co/200x80/1e293b/ffffff?text=Anthropic',
-    'https://placehold.co/200x80/1e293b/ffffff?text=Google',
-    'https://placehold.co/200x80/1e293b/ffffff?text=Meta',
-    'https://placehold.co/200x80/1e293b/ffffff?text=Mistral',
-    'https://placehold.co/200x80/1e293b/ffffff?text=Cohere',
-    'https://placehold.co/200x80/1e293b/ffffff?text=X-AI',
+    'https://img.icons8.com/softteal/24/chatgpt.png',
+    'https://img.icons8.com/fluency/48/claude.png',
+    'https://img.icons8.com/fluency/48/gemini-ai.png',
+    'https://img.icons8.com/fluency/48/meta.png',
+
+    'https://img.icons8.com/F2F2F2/48/grok--v1.png', 'https://img.icons8.com/color/48/nvidia.png', 'https://img.icons8.com/softteal/24/chatgpt.png',
+    'https://img.icons8.com/fluency/48/claude.png',
+    'https://img.icons8.com/fluency/48/gemini-ai.png',
+    'https://img.icons8.com/fluency/48/meta.png',
+
+    'https://img.icons8.com/F2F2F2/48/grok--v1.png', 'https://img.icons8.com/color/48/nvidia.png'
   ];
 
   // Duplicate the array to create a seamless loop
   const duplicatedImages = [...providerImages, ...providerImages];
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto mt-12 overflow-hidden">
+    <div className="relative w-full max-w-2xl mx-auto mt-12 overflow-hidden">
       {/* This creates the fading effect on the left and right sides */}
       <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-slate-900 to-transparent z-10"></div>
       <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-slate-900 to-transparent z-10"></div>
