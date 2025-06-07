@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Download, MessageSquare, Zap, Shield, Cpu, Globe, Terminal, CheckCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-
+import demoImage from '../assets/demo.png'
 export default function EchoLLMLanding() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -65,7 +65,7 @@ export default function EchoLLMLanding() {
           </div>
           <div className="mt-12">
             <Image
-              src="/demo.png"
+              src={demoImage}
               alt="EchoLLM Interface"
               width={800}
               height={500}
