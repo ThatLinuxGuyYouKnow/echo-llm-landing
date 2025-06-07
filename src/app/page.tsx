@@ -365,26 +365,15 @@ export default function EchoLLMLanding() {
             <div>
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Help Center
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Community
-                  </Link>
-                </li>
+
+
+
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     GitHub
                   </Link>
                 </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Bug Reports
-                  </Link>
-                </li>
+
               </ul>
             </div>
             <div>
