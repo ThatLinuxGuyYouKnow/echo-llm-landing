@@ -65,7 +65,7 @@ export default function EchoLLMLanding() {
           </div>
           <div className="mt-12">
             <Image
-              src="/images/ui-screenshot.png"
+              src="/demo.png"
               alt="EchoLLM Interface"
               width={800}
               height={500}
