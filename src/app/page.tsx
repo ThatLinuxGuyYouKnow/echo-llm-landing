@@ -283,7 +283,7 @@ export default function EchoLLMLanding() {
                 <div>
                   <h4 className="font-semibold text-blue-400 mb-2">OpenAI</h4>
                   <ul className="text-slate-300 space-y-1">
-                    <li>• GPT-4</li>
+                    <li>• GPT-4.1</li>
                     <li>• GPT-3.5</li>
                     <li>• GPT-4 Turbo</li>
                   </ul>
@@ -299,17 +299,17 @@ export default function EchoLLMLanding() {
                 <div>
                   <h4 className="font-semibold text-blue-400 mb-2">Google</h4>
                   <ul className="text-slate-300 space-y-1">
-                    <li>• Gemini Pro</li>
-                    <li>• PaLM 2</li>
-                    <li>• Bard</li>
+                    <li>• Gemini 2.0 Flash Lite</li>
+                    <li>• Gemini 2.0 Flash</li>
+                    <li>• Gemini 2.5 Pro</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-blue-400 mb-2">Meta</h4>
+                  <h4 className="font-semibold text-blue-400 mb-2">X-AI</h4>
                   <ul className="text-slate-300 space-y-1">
-                    <li>• Llama 2</li>
-                    <li>• Code Llama</li>
-                    <li>• Llama 3</li>
+                    <li>• Grok 2</li>
+                    <li>• Grok 3</li>
+                    <li>• Grok 3 mini</li>
                   </ul>
                 </div>
               </div>
@@ -349,11 +349,7 @@ export default function EchoLLMLanding() {
                     Documentation
                   </Link>
                 </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    API Reference
-                  </Link>
-                </li>
+
               </ul>
             </div>
             <div>
@@ -374,20 +370,12 @@ export default function EchoLLMLanding() {
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-slate-400">
                 <li>
-                  <Link href="#about" className="hover:text-white transition-colors">
+                  <Link href="https://github.com/ThatlinuxGuyYouKnow/echollm" className="hover:text-white transition-colors">
                     About
                   </Link>
                 </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
+
+
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     Contact
