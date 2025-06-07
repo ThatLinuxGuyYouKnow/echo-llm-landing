@@ -204,38 +204,6 @@ export default function EchoLLMLanding() {
             </Card>
           </div>
 
-          <div className="mt-12 text-center">
-            <h3 className="text-2xl font-bold mb-6">System Requirements</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-slate-800/30 p-6 rounded-lg">
-                <h4 className="font-semibold mb-2 text-blue-400">Minimum</h4>
-                <ul className="text-sm text-slate-300 space-y-1">
-                  <li>• 8GB RAM</li>
-                  <li>• 4 CPU cores</li>
-                  <li>• 10GB storage</li>
-                  <li>• Ubuntu 20.04+</li>
-                </ul>
-              </div>
-              <div className="bg-slate-800/30 p-6 rounded-lg">
-                <h4 className="font-semibold mb-2 text-blue-400">Recommended</h4>
-                <ul className="text-sm text-slate-300 space-y-1">
-                  <li>• 16GB RAM</li>
-                  <li>• 8 CPU cores</li>
-                  <li>• 50GB storage</li>
-                  <li>• NVIDIA GPU</li>
-                </ul>
-              </div>
-              <div className="bg-slate-800/30 p-6 rounded-lg">
-                <h4 className="font-semibold mb-2 text-blue-400">Optimal</h4>
-                <ul className="text-sm text-slate-300 space-y-1">
-                  <li>• 32GB+ RAM</li>
-                  <li>• 16+ CPU cores</li>
-                  <li>• 100GB+ storage</li>
-                  <li>• RTX 4090</li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
