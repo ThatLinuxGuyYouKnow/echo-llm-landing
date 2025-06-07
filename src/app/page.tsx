@@ -158,7 +158,12 @@ export default function EchoLLMLanding() {
                   Download for Linux
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800 text-lg px-8 py-3" asChild>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-slate-600 bg-slate-800 text-white hover:bg-slate-700 hover:border-slate-500 text-lg px-8 py-3"
+                asChild
+              >
                 <Link href="https://github.com/ThatlinuxGuyYouKnow/echollm" target="_blank">
                   <Github className="w-5 h-5 mr-2" />
                   View on GitHub
@@ -215,7 +220,13 @@ export default function EchoLLMLanding() {
         {/* Download Section */}
         <section ref={downloadRef} id="download" className="py-20 px-4">
           {/* Your download section content remains here */}
-          <div className="container mx-auto max-w-4xl"><div className="text-center mb-12"><h2 className="text-4xl font-bold mb-4">Get Started Today</h2><p className="text-xl text-slate-300">Download EchoLLM for your Linux distribution and start using AI locally.</p></div><div className="grid md:grid-cols-2 gap-8"><Card className="bg-slate-800/50 border-slate-700"><CardHeader><CardTitle className="text-white flex items-center"><Terminal className="w-6 h-6 mr-2 text-blue-400" />Ubuntu / Debian</CardTitle><CardDescription className="text-slate-300">Recommended for most users</CardDescription></CardHeader><CardContent className="space-y-4"><div className="bg-slate-900 p-4 rounded-lg font-mono text-sm"><div className="text-slate-400"># Download and install</div><div className="text-green-400">wget https://releases.echollm.dev/echollm_latest_amd64.deb</div><div className="text-green-400">sudo dpkg -i echollm_latest_amd64.deb</div></div><Button className="w-full bg-blue-600 hover:bg-blue-700"><Download className="w-4 h-4 mr-2" />Download .deb Package</Button></CardContent></Card><Card className="bg-slate-800/50 border-slate-700"><CardHeader><CardTitle className="text-white flex items-center"><Terminal className="w-6 h-6 mr-2 text-blue-400" />Other Distributions</CardTitle><CardDescription className="text-slate-300">AppImage for universal compatibility</CardDescription></CardHeader><CardContent className="space-y-4"><div className="bg-slate-900 p-4 rounded-lg font-mono text-sm"><div className="text-slate-400"># Download and run</div><div className="text-green-400">wget https://releases.echollm.dev/EchoLLM.AppImage</div><div className="text-green-400">chmod +x EchoLLM.AppImage</div><div className="text-green-400">./EchoLLM.AppImage</div></div><Button variant="outline" className="w-full border-slate-600 text-slate-300 hover:bg-slate-800"><Download className="w-4 h-4 mr-2" />Download AppImage</Button></CardContent></Card></div></div>
+          <div className="container mx-auto max-w-4xl"><div className="text-center mb-12"><h2 className="text-4xl font-bold mb-4">Get Started Today</h2><p className="text-xl text-slate-300">Download EchoLLM for your Linux distribution and start using AI locally.</p></div><div className="grid md:grid-cols-2 gap-8"><Card className="bg-slate-800/50 border-slate-700"><CardHeader><CardTitle className="text-white flex items-center"><Terminal className="w-6 h-6 mr-2 text-blue-400" />Ubuntu / Debian</CardTitle><CardDescription className="text-slate-300">Recommended for most users</CardDescription></CardHeader><CardContent className="space-y-4"><div className="bg-slate-900 p-4 rounded-lg font-mono text-sm"><div className="text-slate-400"># Download and install</div><div className="text-green-400">wget https://releases.echollm.dev/echollm_latest_amd64.deb</div><div className="text-green-400">sudo dpkg -i echollm_latest_amd64.deb</div></div><Button className="w-full bg-blue-600 hover:bg-blue-700"><Download className="w-4 h-4 mr-2" />Download .deb Package</Button></CardContent></Card><Card className="bg-slate-800/50 border-slate-700"><CardHeader><CardTitle className="text-white flex items-center"><Terminal className="w-6 h-6 mr-2 text-blue-400" />Other Distributions</CardTitle><CardDescription className="text-slate-300">AppImage for universal compatibility</CardDescription></CardHeader><CardContent className="space-y-4"><div className="bg-slate-900 p-4 rounded-lg font-mono text-sm"><div className="text-slate-400"># Download and run</div><div className="text-green-400">wget https://releases.echollm.dev/EchoLLM.AppImage</div><div className="text-green-400">chmod +x EchoLLM.AppImage</div><div className="text-green-400">./EchoLLM.AppImage</div></div><Button
+            variant="outline"
+            className="w-full border-slate-600 bg-slate-800 text-white hover:bg-slate-700 hover:border-slate-500"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Download AppImage
+          </Button></CardContent></Card></div></div>
         </section>
 
         {/* About Section */}
