@@ -267,13 +267,7 @@ export default function EchoLLMLanding() {
                     <p className="text-slate-300">Works completely offline with local models.</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-white">Cost Effective</h4>
-                    <p className="text-slate-300">No per-token charges or subscription fees.</p>
-                  </div>
-                </div>
+
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 mt-0.5 flex-shrink-0" />
                   <div>
@@ -403,7 +397,7 @@ export default function EchoLLMLanding() {
             </div>
           </div>
           <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
-            <p>&copy; 2024 EchoLLM. All rights reserved.</p>
+            <p>&copy; 2025 EchoLLM. All rights reserved.</p>
           </div>
         </div>
       </footer>
