@@ -13,7 +13,7 @@ export default function EchoLLMLanding() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <MessageSquare className="w-5 h-5 text-white" />
+              <Image src='/icon.png' alt="icon" width={50} height={50}></Image>
             </div>
             <span className="text-xl font-bold">EchoLLM</span>
           </div>
@@ -79,7 +79,7 @@ export default function EchoLLMLanding() {
       <section id="features" className="py-20 px-4 bg-slate-900/50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Choose EchoLLM?</h2>
+            <h2 className="text-4xl font-bold mb-4">Yeah, but why EchoLLM?</h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Experience the power of AI without compromising on privacy, performance, or flexibility.
             </p>
