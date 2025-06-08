@@ -23,7 +23,9 @@ const initPostHog = () => {
     });
   }
 };
-
+const reportAppImageDownload = () => {
+  posthog.capture('appImageDownload', { property: 'true' })
+}
 const reportDebDownload = () => {
   posthog.capture('debDownload', { property: 'true' })
 }
@@ -124,12 +126,12 @@ export default function EchoLLMLanding() {
 
   // Download handlers with tracking
   const handleDebDownload = () => {
-    trackDownload('deb');
+    reportDebDownload();
     // The actual download will happen via the href
   };
 
   const handleAppImageDownload = () => {
-    trackDownload('appimage');
+    reportAppImageDownload();
     // The actual download will happen via the href
   };
 
