@@ -24,15 +24,9 @@ const initPostHog = () => {
   }
 };
 
-// Track download events
-const trackDownload = (downloadType: 'deb' | 'appimage') => {
-  posthog.capture('download_started', {
-    download_type: downloadType,
-    package: downloadType === 'deb' ? 'echo_llm-1.0.0+1-linux.deb' : 'EchoLLM.AppImage',
-    platform: 'linux',
-    section: 'download',
-  });
-};
+const reportDebDownload = () => {
+  posthog.capture('debDownload', { property: 'true' })
+}
 
 // Track page load
 const trackPageLoad = () => {
