@@ -6,22 +6,16 @@ import { NextRequest, NextResponse } from 'next/server';
  * It captures all requests to `/api/ingest/*` and forwards them to PostHog.
  */
 
-// Updated type for params to match Next.js expectations
+// Correct the type for the second argument
 async function handler(
     req: NextRequest,
-    { params }: { params: Record<string, string | string[]> }
+    { params }: { params: { path: string[] } }
 ) {
     try {
         const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com';
 
-        // Ensure path segments are properly typed as string[]
-        const pathSegments = params.path;
-        if (!Array.isArray(pathSegments)) {
-            // Handle unexpected path format
-            return new NextResponse('Invalid path format', { status: 400 });
-        }
-
-        const path = pathSegments.join('/');
+        // The 'path' from params is already a string array
+        const path = params.path.join('/');
         const url = `${posthogHost}/${path}`;
 
         const response = await fetch(url, {
