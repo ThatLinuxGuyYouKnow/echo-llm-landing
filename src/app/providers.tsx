@@ -12,7 +12,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     useEffect(() => {
         posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
 
-            api_host: 'https://www.echo-llm-hazel.vercel.app/ingest',
+            api_host: '/ingest',
             person_profiles: 'always', capture_pageview: false // Disable automatic pageview capture, as we capture manually
         })
     }, [])
