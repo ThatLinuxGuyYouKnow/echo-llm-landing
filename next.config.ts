@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 // next.config.js
 const nextConfig = {
+  allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
   async rewrites() {
     return [
       {
