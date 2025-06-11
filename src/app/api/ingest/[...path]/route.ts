@@ -38,8 +38,8 @@ async function handler(
             body: req.body,
             // The `duplex: 'half'` property is required by Node.js's fetch implementation
             // when forwarding a streaming request body. Vercel's runtime needs this.
-            // We use @ts-ignore because the standard TS lib might not have this type yet.
-            // @ts-ignore
+            // We use @ts-expect-error because the standard TS lib might not have this type yet.
+            // @ts-expect-error
             duplex: 'half',
             // Ensure we follow any redirects from PostHog.
             redirect: 'follow',
