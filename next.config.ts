@@ -1,16 +1,7 @@
-
-import type { NextConfig } from 'next'
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: '/ingest/:path*',
-        destination: '/api/ingest/:path*',
-      },
-    ]
-  },
-  skipTrailingSlashRedirect: true,
-}
+  /* config options here */
+};
 
-export default nextConfig
+export default nextConfig;
