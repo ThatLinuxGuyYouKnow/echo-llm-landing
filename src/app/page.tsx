@@ -7,6 +7,7 @@ import { Download, MessageSquare, Zap, Shield, Cpu, Globe, Terminal, CheckCircle
 import Image from "next/image";
 import Link from "next/link";
 import demoImage from '../assets/demo.png';
+import { posthog } from 'posthog-js';
 
 
 
@@ -14,8 +15,14 @@ import demoImage from '../assets/demo.png';
 
 type SectionName = 'hero' | 'features' | 'providers' | 'download' | 'about';
 
+const reportDownloadEvent = (downlaodType: string) => {
 
-
+  try {
+    posthog.capture('download', { property: downlaodType })
+    console.log('logged to posthog')
+  }
+  catch (error) { console.log('error logging' + error) }
+}
 
 
 // --- Helper component for the revolving provider logos ---
@@ -653,7 +660,7 @@ export default function EchoLLMLanding() {
 
             className="w-full bg-blue-600 hover:bg-blue-700"
 
-
+            onClick={() => reportDownloadEvent('deb')}
             asChild
 
 
@@ -686,7 +693,7 @@ export default function EchoLLMLanding() {
 
           </Button></CardContent></Card><Card className="bg-slate-800/50 border-slate-700"><CardHeader><CardTitle className="text-white flex items-center"><Terminal className="w-6 h-6 mr-2 text-blue-400" />Other Distributions</CardTitle><CardDescription className="text-slate-300">AppImage for universal compatibility</CardDescription></CardHeader><CardContent className="space-y-4"><div className="bg-slate-900 p-4 rounded-lg font-mono text-sm"><div className="text-slate-400"># Download and run</div><div className="text-green-400">wget https://releases.echollm.dev/EchoLLM.AppImage</div><div className="text-green-400">chmod +x EchoLLM.AppImage</div><div className="text-green-400">./EchoLLM.AppImage</div></div><Button
 
-
+            onClick={() => reportDownloadEvent('appImage')}
             variant="outline"
 
 
@@ -705,7 +712,7 @@ export default function EchoLLMLanding() {
           </Button></CardContent></Card></div></div>
 
 
-        </section>
+        </section >
 
 
 
@@ -714,7 +721,7 @@ export default function EchoLLMLanding() {
         {/* About Section */}
 
 
-        <section ref={aboutRef} id="about" className="py-20 px-4">
+        < section ref={aboutRef} id="about" className="py-20 px-4" >
 
 
 
@@ -723,7 +730,7 @@ export default function EchoLLMLanding() {
           <div className="container mx-auto max-w-4xl"><div className="text-center mb-12"><h2 className="text-4xl font-bold mb-4">Built for Privacy & Performance</h2><p className="text-xl text-slate-300">EchoLLM is designed from the ground up to give you complete control over your AI interactions.</p></div><div className="grid md:grid-cols-2 gap-12 items-center"><div><h3 className="text-2xl font-bold mb-6">Key Benefits</h3><div className="space-y-4"><div className="flex items-start space-x-3"><CheckCircle className="w-6 h-6 text-green-400 mt-0.5 flex-shrink-0" /><div><h4 className="font-semibold text-white">Zero Data Collection</h4><p className="text-slate-300">Your conversations and data never leave your machine.</p></div></div><div className="flex items-start space-x-3"><CheckCircle className="w-6 h-6 text-green-400 mt-0.5 flex-shrink-0" /><div><h4 className="font-semibold text-white">Offline Capable</h4><p className="text-slate-300">Works completely offline with local models.</p></div></div><div className="flex items-start space-x-3"><CheckCircle className="w-6 h-6 text-green-400 mt-0.5 flex-shrink-0" /><div><h4 className="font-semibold text-white">100% Open Source</h4><p className="text-slate-300">Audit the code, contribute features, and be part of the community.</p></div></div></div></div><div className="bg-slate-800/30 p-8 rounded-lg"><h3 className="text-xl font-bold mb-4">Supported Models</h3><div className="grid grid-cols-2 gap-4 text-sm"><div><h4 className="font-semibold text-blue-400 mb-2">OpenAI</h4><ul className="text-slate-300 space-y-1"><li>• GPT-4.1</li><li>• GPT-3.5</li><li>• GPT-4 Turbo</li></ul></div><div><h4 className="font-semibold text-blue-400 mb-2">Anthropic</h4><ul className="text-slate-300 space-y-1"><li>• Claude 3</li><li>• Claude 2</li><li>• Claude Instant</li></ul></div><div><h4 className="font-semibold text-blue-400 mb-2">Google</h4><ul className="text-slate-300 space-y-1"><li>• Gemini 2.0 Flash Lite</li><li>• Gemini 2.0 Flash</li><li>• Gemini 2.5 Pro</li></ul></div><div><h4 className="font-semibold text-blue-400 mb-2">X-AI</h4><ul className="text-slate-300 space-y-1"><li>• Grok 2</li><li>• Grok 3</li><li>• Grok 3 mini</li></ul></div></div></div></div></div>
 
 
-        </section>
+        </section >
 
 
 
@@ -732,7 +739,7 @@ export default function EchoLLMLanding() {
         {/* Footer */}
 
 
-        <footer className="border-t border-slate-800 py-12 px-4">
+        < footer className="border-t border-slate-800 py-12 px-4" >
 
 
 
@@ -741,10 +748,10 @@ export default function EchoLLMLanding() {
           <div className="container mx-auto"><div className="grid md:grid-cols-4 gap-8"><div><div className="flex items-center space-x-2 mb-4"><div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center"><Image src={'/icon.png'} alt='Logo' width={60} height={60} className="rounded-md" /></div><span className="text-xl font-bold">EchoLLM</span></div><p className="text-slate-400">The privacy-first local AI inference platform for Linux.</p></div><div><h4 className="font-semibold mb-4">Product</h4><ul className="space-y-2 text-slate-400"><li><Link href="#features" className="hover:text-white transition-colors">Features</Link></li><li><Link href="#download" className="hover:text-white transition-colors">Download</Link></li><li><Link href="https://github.com/ThatLinuxGuyYouKnow/EchoLLM" className="hover:text-white transition-colors">Documentation</Link></li></ul></div><div><h4 className="font-semibold mb-4">Community</h4><ul className="space-y-2 text-slate-400"><li><Link href="https://github.com/ThatlinuxGuyYouKnow/echollm" target="_blank" className="hover:text-white transition-colors">GitHub</Link></li><li><Link href="#" className="hover:text-white transition-colors">Discord</Link></li></ul></div><div><h4 className="font-semibold mb-4">Company</h4><ul className="space-y-2 text-slate-400"><li><Link href="https://github.com/ThatLinuxGuyYouKnow/EchoLLM" className="hover:text-white transition-colors">About</Link></li><li><Link href="#" className="hover:text-white transition-colors">Contact</Link></li></ul></div></div><div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400"><p>&copy; 2025 EchoLLM. All rights reserved.</p></div></div>
 
 
-        </footer>
+        </footer >
 
 
-      </div>
+      </div >
 
 
     </>
