@@ -12,7 +12,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     useEffect(() => {
         posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
             api_host: '/ingest',
-            person_profiles: 'identified_only',
+            person_profiles: 'always',
             capture_pageview: false
         })
     }, [])
