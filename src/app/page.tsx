@@ -646,73 +646,79 @@ export default function EchoLLMLanding() {
 
 
 
-        {/* Download Section */}
-
-
+{/* Download Section */}
         <section ref={downloadRef} id="download" className="py-20 px-4">
-
-
-
-
-
-          <div className="container mx-auto max-w-4xl"><div className="text-center mb-12"><h2 className="text-4xl font-bold mb-4">Get Started Today</h2><p className="text-xl text-slate-300">Download EchoLLM for your Linux distribution and start using AI locally.</p></div><div className="grid md:grid-cols-2 gap-8"><Card className="bg-slate-800/50 border-slate-700"><CardHeader><CardTitle className="text-white flex items-center"><Terminal className="w-6 h-6 mr-2 text-blue-400" />Ubuntu / Debian</CardTitle><CardDescription className="text-slate-300">Recommended for most users</CardDescription></CardHeader><CardContent className="space-y-4"><div className="bg-slate-900 p-4 rounded-lg font-mono text-sm"><div className="text-slate-400"># Download and install</div><div className="text-green-400">wget https://github.com/ThatLinuxGuyYouKnow/EchoLLM/releases/download/alphav2/echo_llm-1.0.0+1-linux.deb</div><div className="text-green-400">sudo dpkg -i echo_llm-1.0.0+1-linux.deb</div></div><Button
-
-
-            className="w-full bg-blue-600 hover:bg-blue-700"
-
-            onClick={() => reportDownloadEvent('deb')}
-            asChild
-
-
-          >
-
-
-            <Link
-
-
-              href="https://github.com/ThatLinuxGuyYouKnow/EchoLLM/releases/download/alpha/echo_llm-1.0.0+1-linux.deb"
-
-
-              target="_blank"
-
-
-              rel="noopener noreferrer"
-
-
-            >
-
-
-              <Download className="w-4 h-4 mr-2" />
-
-
-              Download .deb Package
-
-
-            </Link>
-
-
-          </Button></CardContent></Card><Card className="bg-slate-800/50 border-slate-700"><CardHeader><CardTitle className="text-white flex items-center"><Terminal className="w-6 h-6 mr-2 text-blue-400" />Other Distributions</CardTitle><CardDescription className="text-slate-300">AppImage for universal compatibility</CardDescription></CardHeader><CardContent className="space-y-4"><div className="bg-slate-900 p-4 rounded-lg font-mono text-sm"><div className="text-slate-400"># Download and run</div><div className="text-green-400">wget https://releases.echollm.dev/EchoLLM.AppImage</div><div className="text-green-400">chmod +x EchoLLM.AppImage</div><div className="text-green-400">./EchoLLM.AppImage</div></div><Button
-
-            onClick={() => reportDownloadEvent('appImage')}
-            variant="outline"
-
-
-            className="w-full border-slate-600 bg-slate-800 text-white hover:bg-slate-700 hover:border-slate-500"
-
-
-          >
-
-
-            <Download className="w-4 h-4 mr-2" />
-
-
-            Download AppImage
-
-
-          </Button></CardContent></Card></div></div>
-
-
-        </section >
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">Get Started Today</h2>
+              <p className="text-xl text-slate-300">Install EchoLLM from the Snap Store or build from source.</p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="bg-slate-800/50 border-slate-700">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center">
+                    <Terminal className="w-6 h-6 mr-2 text-blue-400" />
+                    Snap Store (Recommended)
+                  </CardTitle>
+                  <CardDescription className="text-slate-300">Easiest way to install on Ubuntu and other Linux distributions</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="bg-slate-900 p-4 rounded-lg font-mono text-sm">
+                    <div className="text-slate-400"># Install from Snap Store</div>
+                    <div className="text-green-400">sudo snap install echollm</div>
+                  </div>
+                  <Button
+                    className="w-full bg-blue-600 hover:bg-blue-700"
+                    onClick={() => reportDownloadEvent('snap')}
+                    asChild
+                  >
+                    <Link
+                      href="https://snapcraft.io/echollm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="https://snapcraft.io/en/dark/install.svg"
+                        alt="Get it from the Snap Store"
+                        className="h-10 mx-auto"
+                      />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card className="bg-slate-800/50 border-slate-700">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center">
+                    <Github className="w-6 h-6 mr-2 text-blue-400" />
+                    Build from Source
+                  </CardTitle>
+                  <CardDescription className="text-slate-300">For users who prefer to compile themselves</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="bg-slate-900 p-4 rounded-lg font-mono text-sm">
+                    <div className="text-slate-400"># Clone and build</div>
+                    <div className="text-green-400">git clone https://github.com/ThatLinuxGuyYouKnow/EchoLLM</div>
+                    <div className="text-green-400">cd EchoLLM && ./build.sh</div>
+                  </div>
+                  <Button
+                    variant="outline"
+                    className="w-full border-slate-600 bg-slate-800 text-white hover:bg-slate-700 hover:border-slate-500"
+                    asChild
+                  >
+                    <Link
+                      href="https://github.com/ThatLinuxGuyYouKnow/EchoLLM"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      View Repository
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
 
 
 
